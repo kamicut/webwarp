@@ -1,6 +1,6 @@
-/*  
+/*
  * main.js
- * 
+ *
  */
 
 /* global twgl:false, document:false */
@@ -26,7 +26,7 @@ var arrays = {
 
 var textures = twgl.createTextures(gl, {
   world: {
-    src: "./world1024.jpg", 
+    src: "./world1024.jpg",
     min: gl.LINEAR, mag: gl.LINEAR,
   }
 });
@@ -53,6 +53,3 @@ function render(time) {
 requestAnimationFrame(render);
 
 })();
-
-
-

@@ -14,11 +14,11 @@
 </head>
 <body>
 
-<canvas id='c' height="400" width="400"></canvas>
+<canvas id='c' height="400" width="800"></canvas>
 
 <script type="x-shader/vertex" id="vs">
-  attribute vec2 a_texCoord;  
-  attribute vec2 a_position;  
+  attribute vec2 a_texCoord;
+  attribute vec2 a_position;
   varying vec2 v_texCoord;
 
   void main() {
@@ -38,7 +38,7 @@
 
   void main() {
     float y = 2.0 * PI * (v_texCoord.t - 0.5);
-    gl_FragColor = texture2D(u_image, 
+    gl_FragColor = texture2D(u_image,
         vec2(v_texCoord.s, (2.0*atan(exp(y)) - PI/2.0)/PI + 0.5)
         );
   }
